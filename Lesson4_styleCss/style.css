@@ -1,0 +1,24 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+div {
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    display: inline-block;
+    background-color: bisque;
+    margin-right: 5px;
+}
+
+.swow {
+    display: block;
+}
+
+.hide{
+    display: none;
+}
