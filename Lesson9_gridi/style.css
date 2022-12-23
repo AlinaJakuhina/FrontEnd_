@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* bootstrap */
+/* grid-template-columns(maximum 12) */
+/* repeat */
+/* еденица гибкости  - fr */
+
+/* grid-colomn - gap */
+/* grid-row -gap */
+
+.items {
+    display: grid;
+    /* grid-template-columns: 80px 120px; ---> добавляется 2 колонки */
+    /* grid-template-columns: 50% 50% 100px; --> добавляется 3 колонки, скрола не в коем случаеть быть не должно!!! */
+    /* grid-template-columns: repeat(4, 100px) 50px; ---> 4colomns 100px */
+    /* grid-template-columns: 40% 40%; ---> width colomn (ширина колонок) */
+    /* grid-template-rows: 100px 200px 300px; ---> row -height(высота колонок)  */
+    /* grid-template-columns: 300px; */
+    /* grid-template-columns: 1fr 1fr 1fr; --> делится на ровные части */
+
+    grid-template-columns: repeat(4, 100px);
+    /* grid-column-gap: 50px;
+    grid-row-gap: 50px; */
+    /* grid-gap: 50px 100px; */
+    /*        row   colomn*/
+    /* grid-template: repeat(2, 100px) / repeat(3, 50px); */
+    /*            grid-template-rows   grid-template-columns     */
+/* gap = равномерное деление колонок  */
+    grid-gap: 30px;
+}
+
+.item{
+    border: 1px solid red;
+    padding: 10px;
+}
+
+/* nth-child() ---> ребёнок дива */
+/* .item:nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 3; */
+    /* grid-column: 2/3      - короткая запись */
+/* } */
+
+/* .item:nth-child(2){
+    grid-column-start: 1;
+    grid-row-start: 1;
+    /* grid-row: 1/3         - короткая запись*/
+/* } */
+/* 
+.item:nth-child(4){
+    grid-column: 3/4; 
+     /* - расположение по колонкам */
+    /* grid-row: 3/4;    */
+      /* - расположение по колонкам */
+/* } */
+
+/* .item:nth-child(8){
+    grid-column: 2/3;  */
+    /* - от 2 колонка до 3 строка
+    grid-row: 2/3; */
+     /* - 2 колонка до 3 строки */
+/*    
+} */ 
+
+/* .item:nth-child(1){
+    grid-column: 2;
+}
+
+.item:nth-child(2){
+    grid-column: 2;
+    grid-row: 2;
+}
+.item:nth-child(3){
+    grid-column: 3;
+    grid-row: 2;
+}
+.item:nth-child(4){
+    grid-column: 1;
+    grid-row: 1;
+}
+.item:nth-child(5){
+    grid-column: 1;
+    grid-row: 2;
+} */
+
+ /* 3.задача
+.item:nth-child(1){
+    grid-column: 1/3; 
+  grid-column: 1/ span 2;  (spфn- занимать сколько колонок, в этом случае занимает 2 колонки 
+}
+.item:nth-child(2){
+    grid-column: 3;
+    grid-row: 1/3 ;
+} */
+
+/* 4.задача */
+
+/* .item:nth-child(1){
+    grid-column: 1/ span 2;
+}
+.item:nth-child(2){
+    grid-column: 3 / span 2;
+}
+.item:nth-child(4){
+    grid-column: 2 / span 3;
+}
+.item:nth-child(5){
+    grid-column: 1/ span 4;
+} */
+
+
+/* 5.task */
+
+.item-child {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.item:nth-child(1){
+    grid-column: 1/ span 2;
+}
+.item:nth-child(2){
+    grid-column: 3 / span 2;
+}
+.item:nth-child(3){
+    grid-column: 1 / span 2;
+
+}
+.item:nth-child(4){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+.item-child:nth-child(1){
+    grid-column: 1 /span 4;
+}
